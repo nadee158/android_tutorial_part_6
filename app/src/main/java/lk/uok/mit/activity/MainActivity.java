@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import lk.uok.mit.fragment.AccelerometerDemoFragment;
 import lk.uok.mit.fragment.MainFragment;
+import lk.uok.mit.fragment.OrientationSensorDemoFragment;
 import lk.uok.mit.fragment.RotationalVectorSensorDemoFragment;
 import lk.uok.mit.helloworld.HelloWorldActivity;
 import lk.uok.mit.helloworld.R;
@@ -90,6 +91,16 @@ public class MainActivity extends AppCompatActivity {
                                 ft = getSupportFragmentManager().beginTransaction();
                                 // Replace the contents of the container with the new fragment
                                 ft.replace(R.id.fragment_content, new RotationalVectorSensorDemoFragment());
+                                // or ft.add(R.id.content_frame, new MainFragment());
+                                // Complete the changes added above
+                                ft.commit();
+                                break;
+                            case R.id.nav_orientation_sensor_demo:
+                                //Open the  OrientationSensorDemoFragment
+                                // Begin the transaction
+                                ft = getSupportFragmentManager().beginTransaction();
+                                // Replace the contents of the container with the new fragment
+                                ft.replace(R.id.fragment_content, new OrientationSensorDemoFragment());
                                 // or ft.add(R.id.content_frame, new MainFragment());
                                 // Complete the changes added above
                                 ft.commit();
