@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import lk.uok.mit.fragment.AccelerometerDemoFragment;
+import lk.uok.mit.fragment.EnvironmentSensorsDemoFragment;
 import lk.uok.mit.fragment.MainFragment;
 import lk.uok.mit.fragment.OrientationSensorDemoFragment;
 import lk.uok.mit.fragment.ProximitySensorDemoFragment;
@@ -112,6 +113,16 @@ public class MainActivity extends AppCompatActivity {
                                 ft = getSupportFragmentManager().beginTransaction();
                                 // Replace the contents of the container with the new fragment
                                 ft.replace(R.id.fragment_content, new ProximitySensorDemoFragment());
+                                // or ft.add(R.id.content_frame, new MainFragment());
+                                // Complete the changes added above
+                                ft.commit();
+                                break;
+                            case R.id.nav_environment_sensor_demo:
+                                //Open the  EnvironmentSensorsDemoFragment
+                                // Begin the transaction
+                                ft = getSupportFragmentManager().beginTransaction();
+                                // Replace the contents of the container with the new fragment
+                                ft.replace(R.id.fragment_content, new EnvironmentSensorsDemoFragment());
                                 // or ft.add(R.id.content_frame, new MainFragment());
                                 // Complete the changes added above
                                 ft.commit();
